@@ -1,5 +1,10 @@
 .about {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   &__title {
     margin-bottom: var(--secondary-typical-margin);
   }
@@ -8,6 +13,7 @@
     display: flex;
     margin-left: calc(-1 * var(--typical-margin));
   }
+
   &__item {
     position: relative;
 
@@ -15,6 +21,7 @@
 
     margin-left: var(--typical-margin);
   }
+
   &__text {
     position: absolute;
     bottom: 0;
