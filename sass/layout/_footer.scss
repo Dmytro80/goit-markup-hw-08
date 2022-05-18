@@ -1,0 +1,39 @@
+.footer {
+  background-color: var(--secondary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__address {
+    width: 231px;
+    margin-right: 70px;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    width: 206px;
+  }
+
+  &__title {
+    font-size: var(--navigation-font-size);
+    line-height: var(--navigation-line-height);
+    letter-spacing: var(--main-text-letter-spacing);
+    text-transform: uppercase;
+
+    color: var(--secondary-title-color);
+
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+}

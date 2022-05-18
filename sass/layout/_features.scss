@@ -1,0 +1,34 @@
+.features-list {
+  display: flex;
+  margin-left: calc(-1 * var(--typical-margin));
+
+  &__item {
+    flex-basis: calc(100% / 4 - var(--typical-margin));
+    margin-left: var(--typical-margin);
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+
+    background: var(--accent-background-color);
+    border-radius: 4px;
+
+    margin-bottom: var(--typical-margin);
+  }
+  &__title {
+    font-size: inherit;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: var(--main-text-line-height);
+  }
+}

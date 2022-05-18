@@ -1,0 +1,21 @@
+.contacts__text {
+  line-height: var(--main-text-line-height);
+  color: var(--secondary-text-color);
+  margin-bottom: 9px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contacts__link {
+  line-height: var(--main-text-line-height);
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-link-color);
+  }
+}

@@ -1,0 +1,15 @@
+body {
+  font-family: Roboto, 'Open Sans', sans-serif;
+  font-size: var(--main-text-font-size);
+  letter-spacing: var(--main-text-letter-spacing);
+  color: var(--main-text-color);
+  background-color: var(--primary-background-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
