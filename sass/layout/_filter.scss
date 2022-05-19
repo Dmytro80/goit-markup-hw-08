@@ -1,14 +1,27 @@
 .filter-list {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
+  margin-top: -15px;
+  margin-right: -8px;
+  margin-bottom: 40px;
 
-  &__item:not(:last-child) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media(768px) {
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  @include media(1200px) {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    margin-top: 15px;
     margin-right: 8px;
   }
 
   &__btn {
-    min-width: 73px;
     padding: 6px 22px;
 
     font-family: inherit;

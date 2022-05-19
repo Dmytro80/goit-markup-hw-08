@@ -7,13 +7,7 @@
   &__container {
     text-align: center;
 
-    @include media(480px) {
-      max-width: 480px;
-    }
-
     @include media(768px) {
-      max-width: 768px;
-
       display: flex;
     }
 
@@ -22,7 +16,6 @@
     }
 
     @include media(1200px) {
-      max-width: 1200px;
       text-align: start;
 
       align-items: baseline;
