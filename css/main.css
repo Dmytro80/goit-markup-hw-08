@@ -123,10 +123,15 @@ address {
 .logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-link-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .logo--dark {
   color: #000000;
@@ -214,11 +219,21 @@ address {
 .contacts__text {
   line-height: var(--main-text-line-height);
   color: var(--secondary-text-color);
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__text {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__link {
@@ -230,13 +245,21 @@ address {
   color: var(--accent-link-color);
 }
 
-.subscription {
-  display: flex;
-  align-items: flex-end;
+@media screen and (min-width: 1200px) {
+  .subscription {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .subscription__field {
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__field {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 358px;
+  }
 }
 .subscription__text {
   margin-bottom: 20px;
@@ -779,35 +802,80 @@ address {
 }
 
 .footer {
-  background-color: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--secondary-background-color);
 }
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
 }
-.footer__address {
-  width: 231px;
-  margin-right: 70px;
+@media screen and (min-width: 480px) {
+  .footer__container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    max-width: 768px;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    text-align: start;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__wrap {
+    display: flex;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__wrap {
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__address {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    margin-right: 70px;
+  }
 }
 .footer__logo {
   display: block;
   margin-bottom: 20px;
 }
-.footer__social {
-  width: 206px;
+@media screen and (max-width: 767px) {
+  .footer__social {
+    margin-bottom: 60px;
+  }
 }
 .footer__title {
   font-size: var(--navigation-font-size);
   line-height: var(--navigation-line-height);
-  letter-spacing: var(--main-text-letter-spacing);
   text-transform: uppercase;
   color: var(--secondary-title-color);
   margin-bottom: 20px;
 }
-.footer__form {
-  margin-left: auto;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__form {
+    width: 450px;
+    margin: 0 auto;
+  }
 }
 
 .filter-list {

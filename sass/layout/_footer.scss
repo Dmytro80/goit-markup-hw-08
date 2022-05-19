@@ -1,16 +1,56 @@
 .footer {
-  background-color: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
 
+  background-color: var(--secondary-background-color);
+
   &__container {
-    display: flex;
-    align-items: baseline;
+    text-align: center;
+
+    @include media(480px) {
+      max-width: 480px;
+    }
+
+    @include media(768px) {
+      max-width: 768px;
+
+      display: flex;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-direction: column;
+    }
+
+    @include media(1200px) {
+      max-width: 1200px;
+      text-align: start;
+
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
+
+  &__wrap {
+    @include media(768px) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      justify-content: space-around;
+
+      margin-bottom: 60px;
+    }
   }
 
   &__address {
-    width: 231px;
-    margin-right: 70px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @include media(1200px) {
+      margin-right: 70px;
+    }
   }
 
   &__logo {
@@ -19,13 +59,14 @@
   }
 
   &__social {
-    width: 206px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
     font-size: var(--navigation-font-size);
     line-height: var(--navigation-line-height);
-    letter-spacing: var(--main-text-letter-spacing);
     text-transform: uppercase;
 
     color: var(--secondary-title-color);
@@ -34,6 +75,9 @@
   }
 
   &__form {
-    margin-left: auto;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+      margin: 0 auto;
+    }
   }
 }

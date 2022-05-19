@@ -1,11 +1,19 @@
 .contacts__text {
   line-height: var(--main-text-line-height);
   color: var(--secondary-text-color);
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @include media(1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @include media(1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__link {
