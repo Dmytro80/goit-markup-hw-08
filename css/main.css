@@ -918,16 +918,34 @@ address {
 }
 
 .work-list {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: calc(-1 * var(--typical-margin));
   margin-bottom: calc(-1 * var(--typical-margin));
 }
+@media screen and (min-width: 768px) {
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .work-list__item {
-  flex-basis: calc(33.3333333333% - var(--typical-margin));
   margin-left: var(--typical-margin);
   margin-bottom: var(--typical-margin);
   background: var(--primary-background-color);
+}
+@media screen and (min-width: 768px) {
+  .work-list__item {
+    flex-basis: calc(50% - var(--typical-margin));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work-list__item {
+    flex-basis: calc(33.3333333333% - var(--typical-margin));
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .work-list__item:nth-child(1) .work-list__content {
+    min-height: 147px;
+  }
 }
 .work-list__link {
   display: block;
