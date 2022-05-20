@@ -5,14 +5,19 @@
   transform: translate(-50%, -50%) scale(1) skew(0);
   transition: transform 250ms var(--timing-function);
 
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
 
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @include media(1200px) {
+    width: 528px;
+    height: 581px;
+  }
 
   &__close-btn {
     display: flex;
@@ -46,16 +51,19 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: var(--main-title-color);
+
+    @include media(1200px) {
+      line-height: 1.15;
+    }
   }
 
   &__field {
     display: flex;
     flex-direction: column;
 
-    width: 448px;
     margin-bottom: 10px;
 
     &:nth-child(4) {
