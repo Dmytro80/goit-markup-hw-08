@@ -19,14 +19,14 @@
     content: '';
     width: 16px;
     height: 15px;
-    margin-right: 9px;
+    margin-right: 8px;
 
     border: 2px solid #212121;
     border-radius: 2px;
 
     transition: border-color 250ms var(--timing-function);
 
-    @media screen and (max-width: 1199px) {
+    @include media(1200px) {
       margin-right: 8px;
     }
   }
