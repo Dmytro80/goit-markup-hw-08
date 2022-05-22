@@ -21,13 +21,13 @@
     }
   }
 
-  &__item:nth-child(1) {
-    .work-list__content {
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
-        min-height: 147px;
-      }
-    }
-  }
+  // &__item:nth-child(1) {
+  //   .work-list__content {
+  //     @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //       min-height: 147px;
+  //     }
+  //   }
+  // }
 
   &__link {
     display: block;
@@ -71,6 +71,9 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 20px 24px;
 
     border-left: 1px solid #eeeeee;
