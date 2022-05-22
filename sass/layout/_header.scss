@@ -23,6 +23,10 @@
     }
 
     @include media(768px) {
+      margin-right: 88px;
+    }
+
+    @include media(1200px) {
       margin-right: 93px;
     }
   }
@@ -106,16 +110,39 @@
   display: none;
 
   @include media(768px) {
-    display: flex;
+    display: block;
     margin-left: auto;
   }
 
+  @include media(1200px) {
+    display: flex;
+  }
+
+  .header__link {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding: 0;
+
+      font-size: 12px;
+      line-height: 1.17;
+    }
+  }
+
   &__item:first-child {
-    margin-right: var(--secondary-typical-margin);
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+
+    @include media(1200px) {
+      margin-right: var(--secondary-typical-margin);
+    }
   }
 
   &__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+
+    @include media(1200px) {
+      margin-right: 10px;
+    }
   }
 }
