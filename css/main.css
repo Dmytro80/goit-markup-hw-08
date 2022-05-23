@@ -740,11 +740,16 @@ address {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #c4c4c4;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob-2x.jpg);
+  }
 }
 @media screen and (min-width: 480px) {
   .hero {
@@ -754,6 +759,12 @@ address {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -761,6 +772,12 @@ address {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-2x.jpg);
   }
 }
 .hero__title {
@@ -1159,7 +1176,9 @@ address {
   }
 }
 .work-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms var(--timing-function);
 }
 .work-list__link:hover, .work-list__link:focus {
@@ -1187,8 +1206,6 @@ address {
   transform: translateY(0);
 }
 .work-list__content {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
