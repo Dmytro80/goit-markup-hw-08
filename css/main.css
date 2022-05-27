@@ -311,6 +311,7 @@ address {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  overflow-y: auto;
 }
 
 .modal {
